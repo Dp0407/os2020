@@ -9,6 +9,6 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: *Put your name here*
-* Student ID: *Put your ID here*
+* Student Name: *Tran Dai Duong*
+* Student ID: *BI9-079*
 
