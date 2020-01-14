@@ -1,0 +1,20 @@
+Pipe and I/O Redirection.
+ubuntu@ubuntu:~$ ls | grep list
+filelist
+ubuntu@ubuntu:~$ wc -l /etc/passwd
+41 /etc/passwd
+ubuntu@ubuntu:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:        3820096     1573592      296216      339020     1950288     1629284
+Swap:             0           0           0
+ubuntu@ubuntu:~$ cat /proc/cpuinfo | grep 'core'
+core id		: 0
+cpu cores	: 2
+core id		: 1
+cpu cores	: 2
+core id		: 0
+cpu cores	: 2
+core id		: 1
+cpu cores	: 2
+ubuntu@ubuntu:~$ find home/ubuntu/Pictures|grep ".jpg"
+find: ‘home/ubuntu/Pictures’: No such file or directory
