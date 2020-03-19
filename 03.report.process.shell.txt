@@ -1,0 +1,49 @@
+ps man
+  PID TTY      STAT   TIME COMMAND
+ 1995 tty1     -      0:06 /usr/lib/xorg/Xorg -nolisten tcp -auth /
+    - -        Ssl+   0:05 -
+    - -        Ssl+   0:00 -
+    - -        Ssl+   0:00 -
+    - -        Ssl+   0:01 -
+ 3174 pts/0    -      0:00 /bin/bash
+    - -        Ss     0:00 -
+ 3185 pts/1    -      0:00 /bin/bash
+    - -        Ss+    0:00 -
+ 3416 pts/0    -      0:00 ps man
+    - -        R+     0:00 -
+gnome-calculator
+
+ps man | grep gnome-calculator
+ 3756 pts/0    -      0:00 grep --color=auto gnome-calculator
+
+cat /proc/$$/status
+Name:   bash
+Umask:  0002
+State:  S (sleeping)
+Tgid:   3174
+Ngid:   0
+Pid:    3174
+PPid:   3171
+TracerPid:      0
+Uid:    999     999     999     999
+Gid:    999     999     999     999
+FDSize: 256
+Speculation_Store_Bypass:       thread vulnerable
+Cpus_allowed:   f
+Cpus_allowed_list:      0-3
+Mems_allowed:   00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:      0
+voluntary_ctxt_switches:        87
+nonvoluntary_ctxt_switches:     6
+
+kill -STOP 3958
+bash: kill: (3958) - No such process
+
+kill -s STOP 3509
+bash: kill: (3509) - No such process
+
+ps
+  PID TTY          TIME CMD
+ 3174 pts/0    00:00:00 bash
+ 3447 pts/0    00:00:00 ps
+
