@@ -1,0 +1,7 @@
+ubuntu@ubuntu:~$ ps aux | grep -i firefox
+ubuntu    2425  4.6 13.2 2051632 507708 ?      Sl   02:37   4:0
+ubuntu@ubuntu:~$ pidof firefox
+3837 2713 2682 2626 2528 2425
+ubuntu@ubuntu:~$ ps -o nlwp 3837
+NLWP
+  18
